@@ -35,6 +35,23 @@ body{
 	margin: 0px 0px 0px 0px;
 }
 
+@media(max-width:768px) {
+	#coverHeadline h1 {
+	font-size: 30px;
+	padding: 15px 20px 5px 20px;
+	margin: 0px 0px 0px 0px;
+}
+
+	#coverHeadline .subtitle {
+		font-size: 16px;
+	}
+	
+	#coverHeadline {
+	position: absolute;
+	bottom: 35px;
+	}
+}
+
 #coverHeadline h1 span {
 	display: inline-block;
 }
@@ -221,6 +238,27 @@ h6 small {
 	height:340px;
 }
 
+@media(max-width:768px) {
+	#coverRow {
+	position: relative;
+	height:400px;
+	}
+	
+	#coverImage {
+	position: absolute;
+	top: 0;
+	height:640px;
+	}
+	
+	#alertZone {
+		position:absolute;
+		margin-top: 10px;
+	}
+	
+	.feedButton {
+		margin-right: 5px;
+	}
+}
 
 #mainStoryFeed .label {
 margin-right:10px;
@@ -353,7 +391,7 @@ footer ul li {
 background-color:#2c3e50;
 padding-bottom:0;
 border-bottom: none;
-height: 133px;
+
 z-index: 900;
 -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4);
 box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4);
@@ -474,17 +512,17 @@ box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
 }
 
 .adSkybox {
-	width: 300px;
+	width: 100%;
 	height: 250px;
 }
 
 .adShortBox {
-	width: 300px;
+	width: 100%;
 	height: 150px;
 }
 
 .adRow {
-	width: 300px;
+	width: 100%;
 	height: 68px;
 }
 
@@ -505,5 +543,44 @@ box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
 	padding: 10px;
 }
 
+.navPhantom {
+	display: none;
+}
+
+/* OFF CANVAS STUFF ///////////////////////////////////////////////////*/
+
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -100%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -100%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 100%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 100%; /* 6 columns */
+    margin-left: 1px;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 100%; /* 6 columns */
+  }
+}
 
 

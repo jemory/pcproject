@@ -3,7 +3,7 @@
 <html>
   
   <head>
-    <title>New Page</title>
+    <title>The Post & Courier</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="styleOverrides.css">
@@ -18,6 +18,7 @@
     <link href="css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="skrollr.min.js"></script>
+    <script src="waypoints.min.js"></script>
     <script src="slabtext.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <style></style>
@@ -75,10 +76,16 @@
       </div>
       <div class="row" id="brand">
         <div class="col-sm-5">
-          <div class="panel-heading" id="logo" data-0="position:relative;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
+          <div class="panel-heading" id="logo"
+          data-0="position:relative;"
+          data-top-top="position:fixed;top:0;"
+          data-edge-strategy="set">
             <img src="http://www.postandcourier.com/images/pclogo.png" width="100%" alt="The Post and Courier">
               
               <div class="row" id="logoMenu">
+                <div class="btn-group visible-xs">
+                  <a class="btn dropdown-toggle btn-danger btn-sm feedButton" data-toggle="offcanvas" href="#"><i class="icon-reorder"></i> News Feed</a>
+                </div>
                 <div class="btn-group">
                   <a class="btn dropdown-toggle btn-primary btn-sm" data-toggle="dropdown" href="#"><i class="icon-reorder"></i> Sections</a>
                   <ul class="dropdown-menu">
@@ -119,15 +126,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><!--logoMenu-->
                
           </div>
 
-          <!--FIXED NAV PADDING DIV-->
-          <div style="height:133px" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#logo" data-edge-strategy="set">&nbsp;</div>
+          <!--FIX NAV PADDING DIV-->
+          <div class="navPhantom" style="height:133px" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#logo" data-edge-strategy="set">&nbsp;</div>
           </div>
 
-        <div class="col-sm-7">
+        <div class="col-sm-7" id="alertZone">
 
           <!--BREAKING NEWS-->
           <div class="alert alert-warning alert-dismissable">
@@ -137,8 +144,8 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-4">
+      <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-12 col-sm-5 col-md-4 sidebar-offcanvas" id="sidebar" role="navigation">
           <div class="panel panel-primary" id="newsFeedPanel">
             <div class="panel-heading">News Feed
 
@@ -215,16 +222,16 @@
 
             </div>
 
-            <div class="panel-heading">More Stuff</div>
-            <div class="panel-body">
+            <div class="panel-heading hidden-xs">More Stuff</div>
+            <div class="panel-body hidden-xs">
               More Sidebar Content here.
 
               <div class="relative">
-                <div style="width:300px; height: 260px" class="sponsored">This could be an ad!!</div>
+                <div class="sponsored adSkybox">This could be an ad!!</div>
               </div>
 
               <div class="relative">
-                <div style="width:300px; height: 260px" class="sponsored">This could be an ad!!</div>
+                <div class="sponsored adSkybox">This could be an ad!!</div>
               </div>
 
             </div>
@@ -232,7 +239,7 @@
           </div>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-xs-12 col-sm-7 col-md-8">
 
           <!--COVER STORY-->
           <div class="row" id="coverRow">
@@ -302,7 +309,7 @@
 
           <div class="row teasers">
 
-            <div class="col-md-4">
+            <div class="col-xs-4">
               <div class="box topRow">
                 <span class="category">Features</span>
                 <img class="img-responsive" src="http://www.postandcourier.com/storyimage/CP/20131006/PC12/131009712/AR/0/AR-131009712.jpg&maxw=640&q=100">
@@ -310,7 +317,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-xs-4">
               <div class="box topRow sponsored">
                 <span class="category"> </span>
                 <img class="img-responsive" src="http://www.postandcourier.com/storyimage/CP/20131005/PC1610/131009618/AR/0/AR-131009618.jpg&maxw=640&q=100">
@@ -318,7 +325,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-xs-4">
               <div class="box topRow">
                 <span class="category">South</span>
                 <img class="img-responsive" src="http://www.postandcourier.com/storyimage/CP/20131005/PC1610/131009618/AR/0/AR-131009618.jpg&maxw=640&q=100">
@@ -515,6 +522,14 @@
   </body>
 
 <script>
+
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+  
+});
+
 
 window.onload = function () {
   skrollr.init({
