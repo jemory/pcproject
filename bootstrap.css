@@ -3897,7 +3897,7 @@ clear:both
 
 @media(min-width:768px) {
 .navbar {
-border-radius:4px
+border-radius:0px 0px 4px 4px
 }
 }
 

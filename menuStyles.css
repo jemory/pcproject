@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 
-html, body, .container, .scroller {
+html, body, .containerMenu, .scroller {
 	height: 100%;
+	background-color: rgb(236, 240, 241);
 }
 
 .scroller {
@@ -19,7 +20,7 @@ html, body, .container, .scroller {
 	position: relative;
 }
 
-.container {
+.containerMenu {
 	position: relative;
 	overflow: hidden;
 	background: #34495e;
