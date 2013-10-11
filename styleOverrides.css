@@ -261,6 +261,7 @@ h6 small {
 	background-repeat: no-repeat;
 	-webkit-box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
 	box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
+	z-index: 0;
 }
 
 #coverRow {
@@ -534,10 +535,10 @@ background-size:auto auto;
 }
 
 #logoMenu {
-background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHUlEQVQIHWNkYGCoB2IQkGKC0AxSQPoZiANmgAQBKIcCnzUh5HQAAAAASUVORK5CYII=);
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHUlEQVQIHWNkYGDwAWIQkGKC0AxSQPoZiANmgAQBIY4CbBW8tQ0AAAAASUVORK5CYII=);
 padding:6px 12px;
--webkit-box-shadow:inset 0 1px 16px 0 rgba(0,0,0,0.2);
-box-shadow:inset 0 1px 16px 0 rgba(0,0,0,0.2);
+-webkit-box-shadow:inset 0 1px 8px 0 rgba(0,0,0,0.2);
+box-shadow:inset 0 1px 8px 0 rgba(0,0,0,0.2);
 }
 
 #newsFeedPanel .socialIcons i {
@@ -678,6 +679,10 @@ box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.4);
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.container {
+	z-index: 1;
 }
 
 

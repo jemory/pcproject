@@ -5,8 +5,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-html, body, .containerMenu, .scroller {
+.containerMenu, .scroller {
 	height: 100%;
 	background-color: rgb(236, 240, 241);
 }
@@ -23,12 +22,12 @@ html, body, .containerMenu, .scroller {
 .containerMenu {
 	position: relative;
 	overflow: hidden;
-	background: #34495e;
+	background: rgba(44, 62, 80,1.0);
 }
 
 .menu-trigger {
 	position: relative;
-	padding-left: 60px;
+	padding-left: 40px;
 	font-size: 0.9em;
 }
 
@@ -36,7 +35,7 @@ html, body, .containerMenu, .scroller {
 	position: absolute;
 	top: 2px;
 	left: 0;
-	width: 40px;
+	width: 60px;
 	height: 6px;
 	background: #fff;
 	box-shadow: 0 6px #34495e, 0 12px #fff, 0 18px #34495e, 0 24px #fff;
@@ -61,13 +60,30 @@ html, body, .containerMenu, .scroller {
 	transform: translate3d(-100%, 0, 0);
 }
 
+.mp-menu h1, .mp-menu h2, .mp-menu h3, .mp-menu a, .mp-menu a:visited{
+	color: white;
+	font-family: "Open Sans", sans-serif;
+}
+
+.mp-menu i[class^="icon-"] {
+	color: rgba(255,255,255,0.5);
+	font-size: 14px;
+	line-height: 24px;
+	text-align: right;
+	margin-right:-5px;
+}
+
+.mp-menu .icon-arrow-left:before {
+	color: rgba(255,255,255,0.6);
+}
+
 .mp-level {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #336ca6;
+	background: rgba(44, 62, 80,1.0);
 	-webkit-transform: translate3d(-100%, 0, 0);
 	-moz-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
@@ -168,7 +184,6 @@ html, body, .containerMenu, .scroller {
 .mp-menu h2 {
 	margin: 0;
 	padding: 1em;
-	color: rgba(0,0,0,0.4);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
 	font-size: 2em;
@@ -234,7 +249,8 @@ html, body, .containerMenu, .scroller {
 .mp-menu ul li a:hover,
 .mp-level > ul > li:first-child > a:hover {
 	background: rgba(0,0,0,0.2);
-	box-shadow: inset 0 -1px rgba(0,0,0,0);
+	box-shadow:inset 0 1px 4px 0 rgba(0,0,0,0.1);
+	text-decoration: none;
 }
 
 .mp-menu .mp-level.mp-level-overlay > ul > li > a,
@@ -244,6 +260,8 @@ html, body, .containerMenu, .scroller {
 
 .mp-back {
 	background: rgba(0,0,0,0.1);
+	-webkit-box-shadow:inset 0 1px 8px 0 rgba(0,0,0,0.1);
+	box-shadow:inset 0 1px 4px 0 rgba(0,0,0,0.1);
 	outline: none;
 	color: #fff;
 	text-transform: uppercase;
@@ -253,19 +271,18 @@ html, body, .containerMenu, .scroller {
 	font-size: 0.8em;
 	padding: 1em;
 	position: relative;
-	box-shadow: inset 0 1px rgba(0,0,0,0.1);
 	-webkit-transition: background 0.3s;
 	-moz-transition: background 0.3s;
 	transition: background 0.3s;
 }
 
-.mp-back::after {
-	font-family: 'linecons';
+.mp-back:after {
+	font-family: 'FontAwesome';
 	position: absolute;
-	content: "\e037";
+	content: "\f054";
 	right: 10px;
 	font-size: 1.3em;
-	color: rgba(0,0,0,0.3);
+	color: rgba(255,255,255,0.4);
 }
 
 .mp-menu .mp-level.mp-level-overlay > .mp-back,

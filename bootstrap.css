@@ -3843,9 +3843,8 @@ border-top-left-radius:0
 }
 
 .navbar {
-position:relative;
-z-index:1000;
-min-height:60px;
+position: relative;
+z-index: 2;
 margin-bottom:21px;
 border:1px solid transparent
 }
